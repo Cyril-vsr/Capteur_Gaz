@@ -3,15 +3,9 @@
 #include <SoftwareSerial.h>
 
 // Set your AppEUI and AppKey
-const char *appEui = "BD6C7DC301108EE6";
+const char *appEui = "9314122f9f48664f";
 const char *appKey = "77F85835964FC8C511F87CE864B96A6D";
 
-
-// Utiliser un afficheur OLED 0.96" avec un Arduino Uno
-// https://tutoduino.fr/
-// Copyleft 2020
-// Librairie pour l'afficheur OLED
-// https://github.com/greiman/SSD1306Ascii
 #include "SSD1306Ascii.h"
 #include "SSD1306AsciiAvrI2c.h"
 #define I2C_ADDRESS 0x3C
@@ -37,14 +31,14 @@ void setup()
   debugSerial.begin(57600);
 
   // Wait a maximum of 10s for Serial Monitor
-  /*while (!debugSerial && millis() < 10000)
+  while (!debugSerial && millis() < 10000)
     ;
 
   debugSerial.println("-- STATUS");
   ttn.showStatus();
 
   debugSerial.println("-- JOIN");
-  ttn.join(appEui, appKey);*/
+  ttn.join(appEui, appKey);
 
   // Select what fields to include in the encoded message
   data.has_motion = true;
@@ -101,7 +95,7 @@ void loop()
   size_t size;
   TheThingsMessage::encodeDeviceData(&data, &buffer, &size);*/
 
-  ttn.sendBytes(&GAZ_VALUE, 2);
+  ttn.sendBytes(&GAZ_VALUE, 1);
   //ttn.sendBytes(buffer, size);
 
   delay(10000);
