@@ -28,6 +28,9 @@ https://nodered.org/docs/getting-started/local
 - Function 2 that treat the data if >200 then Help message
 - Chart available at the address http://127.0.0.1:1880/ui
 
+  <img width="340" alt="image" src="https://github.com/user-attachments/assets/d94da382-be66-40f6-ab8e-efef396b91e3" />
+
+
 ## Conclusion
 
 This project allows you to receive LoRa sensor data, process it in Node-RED, and display it in real time on a chart. You can customize and extend this flow to add more features as needed (e.g., sending email or SMS alerts when critical gas levels are detected).
