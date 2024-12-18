@@ -42,8 +42,8 @@ To create a functional system, we wired the following components:
 - **Power**: Arduino powered via USB, LoRa module powered through the 3.3V pin.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/43ec4861-ff2c-4e94-a09d-cb6a87cde89f" alt="Image Description" width="450"/>
-  <img src="https://github.com/user-attachments/assets/81cbb06b-d775-4b6a-95d6-926ad19fbc2a" alt="Image Description" width="450"/>
+  <img src="https://github.com/user-attachments/assets/43ec4861-ff2c-4e94-a09d-cb6a87cde89f" alt="Image Description" width="400"/>
+  <img src="https://github.com/user-attachments/assets/81cbb06b-d775-4b6a-95d6-926ad19fbc2a" alt="Image Description" width="400"/>
 </div>
 
 
