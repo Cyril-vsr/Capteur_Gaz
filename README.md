@@ -42,7 +42,8 @@ To create a functional system, we wired the following components:
 - **Power**: Arduino powered via USB, LoRa module powered through the 3.3V pin.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/43ec4861-ff2c-4e94-a09d-cb6a87cde89f" alt="Image Description" width="500"/>
+  <img src="https://github.com/user-attachments/assets/43ec4861-ff2c-4e94-a09d-cb6a87cde89f" alt="Image Description" width="450"/>
+  <img src="https://github.com/user-attachments/assets/81cbb06b-d775-4b6a-95d6-926ad19fbc2a" alt="Image Description" width="450"/>
 </div>
 
 
@@ -64,3 +65,60 @@ The loop() function reads the sensor data, encodes it, and transmits it using th
 - AppKey: Security key for LoRaWAN.
 - Sensor Pin: Pin A0 for the gas sensor.
 - LoRa TX/RX: Pins 10 and 11 for communication.
+
+
+## Node-Red Overview
+
+The Node-RED flow for this project is designed to receive, process, and display data from a LoRa sensor. The flow involves:
+
+1) **Data Reception**: An MQTT node listens for incoming sensor data, typically from a LoRaWAN network like ChirpStack.
+2) **Data Extraction**: A function node decodes the received Base64-encoded data and extracts the gas level value.
+3) **Data Processing**: Another function node analyzes the gas level and triggers an alert if the value exceeds a set threshold (e.g., 200).
+4) **Visualization**: A chart node displays the real-time gas levels in the Node-RED dashboard.
+
+Flow Highlights:
+- MQTT Node: Configured to receive sensor data from a LoRa network.
+- Function Nodes: Process and filter the incoming data (e.g., extract, decode, and analyze gas levels).
+- Chart Node: Displays the data in real-time on a graphical interface.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3de43fe1-4f5c-4bce-88c6-673ff3560da8" alt="Image Description" width="800"/>
+</div>
+
+Key Parameters:
+- MQTT broker configuration: Connects to the LoRa network.
+- Threshold value: Set to 200 for triggering the alert.
+- Dashboard: Accessible via http://127.0.0.1:1880/ui.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/666008f7-da93-44ea-abd9-14b4d441cbd3" alt="Image Description" width="300"/>
+</div>
+
+## MIT App Inventor
+
+The MIT App Inventor app is designed to connect to the Arduino, allowing users to control the system and view sensor data in real-time.
+
+Features:
+
+1) **Connect to Arduino**: The app connects to the Arduino via Bluetooth when the user presses a connect button.
+2) **Control LED**: Users can turn the LED on or off using buttons in the app.
+3) **Gas Level Monitoring**: The app continuously receives the current gas level from the sensor and displays it.
+4) **Real-time Updates**: Gas level data is updated in real-time on the app interface.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4c98437b-c4e0-48fe-a503-19426bd9d05f" alt="Image Description" width="300"/>
+  <img src="https://github.com/user-attachments/assets/238ae7ba-5674-4854-991c-d3379a41183a" alt="Image Description" width="300"/>
+</div>
+
+Key Components:
+- Connect Button: Establishes communication with the Arduino.
+- LED Control Buttons: Turns the LED on and off.
+- Label: Displays the current gas level.
+- Notifier: Alerts the user if the gas level exceeds a predefined threshold.
+  
+This app provides simple, real-time interaction with the Arduino system, enabling both control and monitoring of environmental conditions.
+
+
+
+
+
+
