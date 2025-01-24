@@ -116,4 +116,7 @@ Key Components:
 - Notifier: Alerts the user if the gas level exceeds a predefined threshold.
   
 This app provides simple, real-time interaction with the Arduino system, enabling both control and monitoring of environmental conditions.
-  
+
+
+##Kicad
+  <img width="844" alt="Capture d’écran 2025-01-24 à 17 13 35" src="https://github.com/user-attachments/assets/72e78dc1-0980-4b78-ba98-3dc29822a225" />
