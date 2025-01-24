@@ -66,6 +66,12 @@ The loop() function reads the sensor data, encodes it, and transmits it using th
 - Sensor Pin: Pin A0 for the gas sensor.
 - LoRa TX/RX: Pins 10 and 11 for communication.
 
+## Kicad
+Below is a view of the routed PCB on KiCad.
+
+  <img width="844" alt="Capture d’écran 2025-01-24 à 17 13 35" src="https://github.com/user-attachments/assets/72e78dc1-0980-4b78-ba98-3dc29822a225" />
+
+
 
 ## Node-Red Overview
 
@@ -116,7 +122,3 @@ Key Components:
 - Notifier: Alerts the user if the gas level exceeds a predefined threshold.
   
 This app provides simple, real-time interaction with the Arduino system, enabling both control and monitoring of environmental conditions.
-
-
-##Kicad
-  <img width="844" alt="Capture d’écran 2025-01-24 à 17 13 35" src="https://github.com/user-attachments/assets/72e78dc1-0980-4b78-ba98-3dc29822a225" />
